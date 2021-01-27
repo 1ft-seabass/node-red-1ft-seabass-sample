@@ -1,0 +1,67 @@
+<script type="text/javascript">
+  RED.nodes.registerType('cred-add-setting-config', {
+    category: 'config',
+    defaults: {
+      name: { value: "" }
+    },
+    label: function () {
+      return this.name || "cred-add-setting-config";
+    },
+    credentials: {
+      apitoken: { type: "text" },
+      password: { type: "password" }
+    }
+  });
+</script>
+
+<script type="text/x-red" data-template-name="cred-add-setting-config">
+
+  <div class="form-row">
+    <label for="node-config-input-name"><i class="icon-tag"></i> Name</label>
+    <input type="text" id="node-config-input-name" placeholder="Name">
+  </div>
+
+  <div class="form-row">
+    <label for="node-config-input-apitoken"><i class="icon-tag"></i> API Token</label>
+    <input type="text" id="node-config-input-apitoken">
+  </div>
+
+  <div class="form-row">
+    <label for="node-config-input-password"><i class="icon-tag"></i> Password</label>
+    <input type="password" id="node-config-input-password">
+  </div>
+</script>
+
+<script type="text/javascript">
+  RED.nodes.registerType('cred-add-setting', {
+    category: 'sample',
+    color: '#E9967A',
+    defaults: {
+      name: { value: "" },
+      setting: { value: "", type: "cred-add-setting-config" }
+    },
+    inputs: 1,
+    outputs: 1,
+    icon: "arrow-in.png",
+    label: function () {
+      return this.name || "cred add setting";
+    }
+  });
+</script>
+
+<script type="text/x-red" data-template-name="cred-add-setting">
+
+    <div class="form-row">
+      <label for="node-input-apitoken"><i class="icon-tag"></i> Setting</label>
+      <input type="text" id="node-input-setting">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="cred-add-setting">
+    <p>Cred Add Setting</p>
+</script>

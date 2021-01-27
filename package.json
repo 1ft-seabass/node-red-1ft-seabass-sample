@@ -1,0 +1,27 @@
+{
+  "name": "node-red-1ft-seabass-sample",
+  "version": "1.0.0",
+  "description": "node-red-1ft-seabass-sample",
+  "main": "index.js",
+  "node-red": {
+    "nodes": {
+        "cred-simple": "cred-simple.js",
+        "cred-add-setting": "cred-add-setting.js"
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "node-red":"node-red -u ../../../node-red_dir -p 18801"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1ft-seabass/node-red-1ft-seabass-sample.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/1ft-seabass/node-red-1ft-seabass-sample/issues"
+  },
+  "homepage": "https://github.com/1ft-seabass/node-red-1ft-seabass-sample#readme"
+}
