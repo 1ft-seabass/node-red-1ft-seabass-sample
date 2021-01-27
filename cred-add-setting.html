@@ -2,7 +2,8 @@
   RED.nodes.registerType('cred-add-setting-config', {
     category: 'config',
     defaults: {
-      name: { value: "" }
+      name: { value: "" },
+      value1: { value: "" }
     },
     label: function () {
       return this.name || "cred-add-setting-config";
@@ -20,6 +21,12 @@
     <label for="node-config-input-name"><i class="icon-tag"></i> Name</label>
     <input type="text" id="node-config-input-name" placeholder="Name">
   </div>
+
+  <div class="form-row">
+    <label for="node-config-input-value1"><i class="icon-tag"></i> Value1</label>
+    <input type="text" id="node-config-input-value1" placeholder="Value1">
+  </div>
+
 
   <div class="form-row">
     <label for="node-config-input-apitoken"><i class="icon-tag"></i> API Token</label>
@@ -50,7 +57,7 @@
 </script>
 
 <script type="text/x-red" data-template-name="cred-add-setting">
-
+  
     <div class="form-row">
       <label for="node-input-apitoken"><i class="icon-tag"></i> Setting</label>
       <input type="text" id="node-input-setting">
